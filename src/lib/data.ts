@@ -140,3 +140,100 @@ export function getAccommodationBySlug(slug: string): Accommodation | undefined 
 export function getAccommodationById(id: string): Accommodation | undefined {
   return accommodations.find(acc => acc.id === id)
 }
+
+
+// Galeria de imagens organizadas
+export interface GalleryImage {
+  id: string
+  url: string
+  title: string
+  category: 'all' | 'exterior' | 'interior' | 'amenities' | 'views'
+  accommodationId?: string
+}
+
+export const galleryImages: GalleryImage[] = [
+  // Exteriores
+  {
+    id: '1',
+    url: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    title: 'Chalé das Flores - Vista Externa',
+    category: 'exterior',
+    accommodationId: '1'
+  },
+  {
+    id: '2',
+    url: 'https://images.unsplash.com/photo-1502775700316-6b2963d0e2b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    title: 'Chalé das Montanhas - Vista Externa',
+    category: 'exterior',
+    accommodationId: '2'
+  },
+  {
+    id: '3',
+    url: 'https://images.unsplash.com/photo-1572120360610-d971b9d7767c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    title: 'Casa Principal - Fachada',
+    category: 'exterior',
+    accommodationId: '3'
+  },
+  // Interiores
+  {
+    id: '4',
+    url: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    title: 'Sala de Estar Aconchegante',
+    category: 'interior',
+    accommodationId: '1'
+  },
+  {
+    id: '5',
+    url: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    title: 'Quarto com Vista',
+    category: 'interior',
+    accommodationId: '1'
+  },
+  {
+    id: '6',
+    url: 'https://images.unsplash.com/photo-1543365067-fa127bcb2303?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    title: 'Sala Ampla',
+    category: 'interior',
+    accommodationId: '2'
+  },
+  // Comodidades
+  {
+    id: '7',
+    url: 'https://images.unsplash.com/photo-1600585154526-990dced4db0d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    title: 'Cozinha Completa',
+    category: 'amenities',
+    accommodationId: '2'
+  },
+  {
+    id: '8',
+    url: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    title: 'Área Gourmet',
+    category: 'amenities',
+    accommodationId: '3'
+  },
+  // Vistas
+  {
+    id: '9',
+    url: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    title: 'Vista das Montanhas',
+    category: 'views'
+  },
+  {
+    id: '10',
+    url: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    title: 'Pôr do Sol',
+    category: 'views'
+  },
+  {
+    id: '11',
+    url: 'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    title: 'Natureza ao Redor',
+    category: 'views'
+  },
+  {
+    id: '12',
+    url: 'https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    title: 'Jardim',
+    category: 'views'
+  }
+]
